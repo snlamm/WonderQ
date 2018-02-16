@@ -1,0 +1,31 @@
+{
+	"name": "WonderQ",
+	"version": "0.1.0",
+	"description": "\"It's the most wonderful Queue of the year...\"",
+	"main": "./brokerApi/run.js",
+	"author": "snlamm <shmuel.lamm@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"express": "^4.16.2",
+		"knex": "^0.14.3",
+		"morgan": "^1.9.0",
+		"objection": "^0.9.4",
+		"request": "^2.83.0",
+		"request-promise": "^4.2.2",
+		"sqlite3": "^3.1.13"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"eslint": "^4.17.0",
+		"intercept-stdout": "^0.1.2",
+		"supertest": "^3.0.0"
+	},
+	"scripts": {
+		"test": "ava --verbose --serial",
+		"lint": "eslint .",
+		"broker": "node brokerApi/run.js",
+		"user": "node userApi/run.js",
+		"dev": "node devApi/run.js"
+	}
+}
